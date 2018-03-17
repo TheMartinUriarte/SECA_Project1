@@ -4,10 +4,10 @@ public class Main {
 
     public static void main(String[] args) {
 	    RockPaperScissors game = new RockPaperScissors();
-	    game.startGame();
+	    game.startGameUp();
     }
 
-//    public void startGame() {
+//    public void startGameUp() {
 //        System.out.println(("Ja-Ken-Pon!!"));
 //    }
 }
