@@ -3,8 +3,8 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
-	    RockPaperScissors game = new RockPaperScissors();
-	    game.startGameUp();
+	    StartGameUp game = new StartGameUp();
+	    game.display();
     }
 
 //    public void startGameUp() {
