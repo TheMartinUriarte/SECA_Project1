@@ -27,7 +27,7 @@ public class RockPaperScissorsTest extends RockPaperScissors {
                 + "MAIN MENU" + "\n"
                 + "=====" + "\n"
                 + "1. Type 'play' to play" + "\n"
-                + "2. Type 'history to view your game history" + "\n"
+                + "2. Type 'history' to view your game history" + "\n"
                 + "Type 'quit' to stop playing" + "\n"
                 + "\n";
         String actual = testStartGameUp.gameStartUp();

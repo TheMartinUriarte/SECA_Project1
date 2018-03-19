@@ -14,7 +14,7 @@ public class RockPaperScissors implements UserSelect {
             + "MAIN MENU" + "\n"
             + "=====" + "\n"
             + "1. Type 'play' to play" + "\n"
-            + "2. Type 'history to view your game history" + "\n"
+            + "2. Type 'history' to view your game history" + "\n"
             + "Type 'quit' to stop playing" + "\n";
 
         System.out.println(welcomeMSG_en);
@@ -68,11 +68,23 @@ public class RockPaperScissors implements UserSelect {
             case "vs computer":
                 System.out.println("\n" + "COMPUTER!!");
                 break;
+            case "1":
+                System.out.println("\n" + "COMPUTER!!");
+                break;
             case "2 players":
+                System.out.println("\n" + "PLAYER 2!!");
+                break;
+            case "2":
                 System.out.println("\n" + "PLAYER 2!!");
                 break;
             default:
                 System.out.println("\n" + "Invalid input2. Please try again!");
+                System.out.println(
+                        "\n"
+                        + "Select your opponent!" + "\n"
+                        + "1. 'vs Computer'" + "\n"
+                        + "2. '2 players'" + "\n");
+                opponentSelect();
                 break;
         }
     }
