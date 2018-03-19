@@ -1,5 +1,8 @@
 package com.company;
 
+import static com.company.Computer.startFight;
+import static com.company.Player2.startFightP2;
+
 public class RockPaperScissors implements UserSelect {
 
     public static String gameStartUp() {
@@ -29,7 +32,9 @@ public class RockPaperScissors implements UserSelect {
                     "\n"
                     + "Select your opponent!" + "\n"
                     + "1. 'vs Computer'" + "\n"
-                    + "2. '2 players'" + "\n");
+                    + "2. '2 players'" + "\n"
+                    + "Type 'quit' to go back to the Main Menu" + "\n"
+                );
                 opponentSelect();
                 break;
             case "1":
@@ -37,14 +42,17 @@ public class RockPaperScissors implements UserSelect {
                     "\n"
                     + "Select your opponent!" + "\n"
                     + "1. 'vs Computer'" + "\n"
-                    + "2. '2 players'" + "\n");
+                    + "2. '2 players'" + "\n"
+                    + "Type 'quit' to go back to the Main Menu" + "\n"
+                );
                 opponentSelect();
                 break;
             case "history":
                 System.out.println("\n" + "History!");
                 break;
             case "2":
-                System.out.println("\n" + "Hisory!");
+                System.out.println("\n" + "History!");
+                break;
             case "quit":
                 System.out.println("\n" + "Quitting! Buh-bye!");
                 break;
@@ -62,17 +70,23 @@ public class RockPaperScissors implements UserSelect {
         switch (userOppSelection) {
             case "vs computer":
                 System.out.println("\n" + "VERSUS COMPUTER!!");
-                Computer.startFight();
+                startFight();
                 break;
             case "1":
                 System.out.println("\n" + "VERSUS COMPUTER!!");
-                Computer.startFight();
+                startFight();
                 break;
             case "2 players":
                 System.out.println("\n" + "HERE COMES A MIGHTY WARRIOR!!");
+                startFightP2();
                 break;
             case "2":
                 System.out.println("\n" + "HERE COMES A MIGHTY WARRIOR!!");
+                startFightP2();
+                break;
+            case "quit":
+                System.out.println();
+                gameStartUp();
                 break;
             default:
                 System.out.println("\n" + "Invalid input. Please try again!");

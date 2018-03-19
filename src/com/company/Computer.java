@@ -4,6 +4,9 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class Computer implements UserSelect {
 
+    int userScore = 0;
+    int computerScore = 0;
+    int totalScore = userScore + computerScore;
 
     //Rock = 1
     //Paper = 2
@@ -11,9 +14,9 @@ public class Computer implements UserSelect {
 
     public static void startFight() {
         int rounds = 0;
+        Computer cp = new Computer();
 
-
-        while (rounds < 3) {
+        while (cp.totalScore < 3) {
             if (rounds == 0) {
                 System.out.println(
                     "\n"
@@ -50,6 +53,7 @@ public class Computer implements UserSelect {
                 );
                 moveSelect();
                 rounds++;
+//                System.out.println(computer().computerScore);
             }
         }
     }
@@ -76,6 +80,8 @@ public class Computer implements UserSelect {
                         + "User picks: rock" + "\n"
                         + "You lose!" + "\n"
                     );
+//                    computerScore ++;
+//                    System.out.println(computerScore);
                 } else {
                     System.out.println(
                         "\n"
@@ -83,6 +89,7 @@ public class Computer implements UserSelect {
                         + "User picks: rock" + "\n"
                         + "You win!" + "\n"
                     );
+//                    userScore ++;
                 }
                 break;
             case "paper":
@@ -93,6 +100,7 @@ public class Computer implements UserSelect {
                         + "User picks: paper" + "\n"
                         + "You win!" + "\n"
                     );
+//                    userScore ++;
                 } else if (randomNum == 2) {
                     System.out.println(
                         "\n"
@@ -107,6 +115,7 @@ public class Computer implements UserSelect {
                         + "User picks: paper" + "\n"
                         + "You lose!" + "\n"
                     );
+//                    computerScore ++;
                 }
                 break;
             case "scissors":
@@ -117,6 +126,7 @@ public class Computer implements UserSelect {
                         + "User picks: scissors" + "\n"
                         + "You lose!" + "\n"
                     );
+//                    computerScore ++;
                 } else if (randomNum == 2) {
                     System.out.println(
                         "\n"
@@ -124,6 +134,7 @@ public class Computer implements UserSelect {
                         + "User picks: scissors" + "\n"
                         + "You win!" + "\n"
                     );
+//                    userScore ++;
                 } else {
                     System.out.println(
                         "\n"
