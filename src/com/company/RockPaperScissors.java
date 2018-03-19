@@ -1,8 +1,8 @@
 package com.company;
 
-import java.util.Scanner;
+import java.util.*;
 
-public class RockPaperScissors {
+public class RockPaperScissors implements UserSelect {
 
     public String gameStartUp() {
 
@@ -20,27 +20,40 @@ public class RockPaperScissors {
         return welcomeMSG_en;
     }
 
+
     public void menuSelect() {
-        Scanner select = new Scanner(System.in);
-        String userSelects = select.nextLine();
-        String userSelection = userSelects.toLowerCase();
 
         switch (userSelection) {
             case "play":
                 System.out.println(
-                        "Select your opponent!" + "\n"
-                                + "1. 'Computer'" + "\n"
-                                + "2. 'User 2'" + "\n"
-                                + "\n");
+                    "\n"
+                    + "Select your opponent!" + "\n"
+                    + "1. 'Computer'" + "\n"
+                    + "2. 'User 2'" + "\n"
+                    + "\n");
                 break;
             case "history":
-                System.out.println("History!");
+                System.out.println("\n" + "History!");
                 break;
             case "quit":
-                System.out.println("Quitting! Buh-bye!");
+                System.out.println("\n" + "Quitting! Buh-bye!");
                 break;
             default:
-                System.out.println("Invalid input. Please try again!");
+                System.out.println("\n" + "Invalid input. Please try again!");
+                break;
+        }
+    }
+
+    public void opponentSelect() {
+        switch (userSelection) {
+            case "computer":
+                System.out.println("COMPUTER!!");
+                break;
+            case "user 2":
+                System.out.println("PLAYER 2!!");
+                break;
+            default:
+                System.out.println("\n" + "Invalid input2. Please try again!");
                 break;
         }
     }

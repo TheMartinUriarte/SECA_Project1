@@ -6,6 +6,7 @@ public class Main {
 	    RockPaperScissors game = new RockPaperScissors();
 	    game.gameStartUp();
 	    game.menuSelect();
+	    game.opponentSelect();
     }
 
 //    public void startGameUp() {

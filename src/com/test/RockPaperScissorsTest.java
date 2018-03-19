@@ -5,6 +5,8 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.Scanner;
+
 import static org.junit.Assert.*;
 
 public class RockPaperScissorsTest extends RockPaperScissors {
@@ -32,6 +34,34 @@ public class RockPaperScissorsTest extends RockPaperScissors {
 
         assertEquals(expected, actual);
     }
+
+//    @Test
+//    public void menuSelect_successfulMenuSelect() {
+//        Scanner select = new Scanner(System.in);
+//        String userSelects = select.nextLine();
+//        String userSelection = userSelects.toLowerCase();
+//
+//            switch (userSelection) {
+//                case "play":
+//                    System.out.println(
+//                            "Select your opponent!" + "\n"
+//                                    + "1. 'Computer'" + "\n"
+//                                    + "2. 'User 2'" + "\n"
+//                                    + "\n");
+//                    break;
+//                case "history":
+//                    System.out.println("History!");
+//                    break;
+//                case "quit":
+//                    System.out.println("Quitting! Buh-bye!");
+//                    break;
+//                default:
+//                    System.out.println("Invalid input. Please try again!");
+//                    break;
+//            }
+//
+//        assertTrue(testStartGameUp.menuSelect_successfulMenuSelect("play") == RockPaperScissors.menuSelect("play"));
+//    }
 
 }
 
