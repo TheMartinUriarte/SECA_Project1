@@ -33,13 +33,23 @@ public class RockPaperScissors implements UserSelect {
                 System.out.println(
                     "\n"
                     + "Select your opponent!" + "\n"
-                    + "1. 'Computer'" + "\n"
-                    + "2. 'User 2'" + "\n");
+                    + "1. 'vs Computer'" + "\n"
+                    + "2. '2 players'" + "\n");
+                opponentSelect();
+                break;
+            case "1":
+                System.out.println(
+                    "\n"
+                    + "Select your opponent!" + "\n"
+                    + "1. 'vs Computer'" + "\n"
+                    + "2. '2 players'" + "\n");
                 opponentSelect();
                 break;
             case "history":
                 System.out.println("\n" + "History!");
                 break;
+            case "2":
+                System.out.println("\n" + "Hisory!");
             case "quit":
                 System.out.println("\n" + "Quitting! Buh-bye!");
                 break;
@@ -55,10 +65,10 @@ public class RockPaperScissors implements UserSelect {
         String userOppSelection = userOppSelect.toLowerCase();
 
         switch (userOppSelection) {
-            case "computer":
+            case "vs computer":
                 System.out.println("\n" + "COMPUTER!!");
                 break;
-            case "user 2":
+            case "2 players":
                 System.out.println("\n" + "PLAYER 2!!");
                 break;
             default:
