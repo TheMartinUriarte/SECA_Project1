@@ -1,12 +1,8 @@
 package com.company;
 
-import java.util.*;
-
-import static java.lang.System.in;
-
 public class RockPaperScissors implements UserSelect {
 
-    public String gameStartUp() {
+    public static String gameStartUp() {
 
         String welcomeMSG_en =
             "Welcome to Rock Paper Scissors!" + "\n"
@@ -23,8 +19,7 @@ public class RockPaperScissors implements UserSelect {
         return welcomeMSG_en;
     }
 
-
-    public void menuSelect() {
+    public static void menuSelect() {
         String userMenuSelect = select.nextLine();
         String userMenuSelection = userMenuSelect.toLowerCase();
 
@@ -60,25 +55,27 @@ public class RockPaperScissors implements UserSelect {
         }
     }
 
-    public void opponentSelect() {
+    public static void opponentSelect() {
         String userOppSelect = select.nextLine();
         String userOppSelection = userOppSelect.toLowerCase();
 
         switch (userOppSelection) {
             case "vs computer":
-                System.out.println("\n" + "COMPUTER!!");
+                System.out.println("\n" + "VERSUS COMPUTER!!");
+                Computer.startFight();
                 break;
             case "1":
-                System.out.println("\n" + "COMPUTER!!");
+                System.out.println("\n" + "VERSUS COMPUTER!!");
+                Computer.startFight();
                 break;
             case "2 players":
-                System.out.println("\n" + "PLAYER 2!!");
+                System.out.println("\n" + "HERE COMES A MIGHTY WARRIOR!!");
                 break;
             case "2":
-                System.out.println("\n" + "PLAYER 2!!");
+                System.out.println("\n" + "HERE COMES A MIGHTY WARRIOR!!");
                 break;
             default:
-                System.out.println("\n" + "Invalid input2. Please try again!");
+                System.out.println("\n" + "Invalid input. Please try again!");
                 System.out.println(
                         "\n"
                         + "Select your opponent!" + "\n"
