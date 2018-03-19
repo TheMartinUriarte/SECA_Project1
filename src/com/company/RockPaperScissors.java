@@ -48,10 +48,12 @@ public class RockPaperScissors implements UserSelect {
                 opponentSelect();
                 break;
             case "history":
-                System.out.println("\n" + "History!");
+                System.out.println("\n" + "Feature coming soon!");
+                gameStartUp();
                 break;
             case "2":
-                System.out.println("\n" + "History!");
+                System.out.println("\n" + "Feature coming soon!");
+                gameStartUp();
                 break;
             case "quit":
                 System.out.println("\n" + "Quitting! Buh-bye!");
@@ -69,19 +71,19 @@ public class RockPaperScissors implements UserSelect {
 
         switch (userOppSelection) {
             case "vs computer":
-                System.out.println("\n" + "VERSUS COMPUTER!!");
+                System.out.println("\n" + "VERSUS COMPUTER!!" + "\n");
                 startFight();
                 break;
             case "1":
-                System.out.println("\n" + "VERSUS COMPUTER!!");
+                System.out.println("\n" + "VERSUS COMPUTER!!" + "\n");
                 startFight();
                 break;
             case "2 players":
-                System.out.println("\n" + "HERE COMES A MIGHTY WARRIOR!!");
+                System.out.println("\n" + "HERE COMES A MIGHTY WARRIOR!!" + "\n");
                 startFightP2();
                 break;
             case "2":
-                System.out.println("\n" + "HERE COMES A MIGHTY WARRIOR!!");
+                System.out.println("\n" + "HERE COMES A MIGHTY WARRIOR!!" + "\n");
                 startFightP2();
                 break;
             case "quit":

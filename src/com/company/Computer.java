@@ -4,59 +4,54 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class Computer implements UserSelect {
 
-    int userScore = 0;
-    int computerScore = 0;
-    int totalScore = userScore + computerScore;
-
     //Rock = 1
     //Paper = 2
     //Scissors = 3
 
     public static void startFight() {
-        int rounds = 0;
-        Computer cp = new Computer();
-
-        while (cp.totalScore < 3) {
-            if (rounds == 0) {
+//        int rounds = 0;
+//
+//        while (Computer.totalScore(int i) < 3) {
+//            if (totalScore() == 0) {
+//                System.out.println(
+//                    "\n"
+//                    + "Type in 'rock' 'paper' or 'scissors' to play." + "\n"
+//                    + "Type 'quit' to go back to the Main Menu" + "\n"
+//                    + "\n"
+//                    + "Firstttt Round!" + "\n"
+//                    + "\n"
+//                    + "BEGIN!!" + "\n"
+//                );
+//                moveSelect();
+//                rounds++;
+//            } else if (totalScore() == 2) {
+//                System.out.println(
+//                    "\n"
+//                    + "Type in 'rock' 'paper' or 'scissors' to play." + "\n"
+//                    + "Type 'quit' to go back to the Main Menu" + "\n"
+//                    + "\n"
+//                    + "Final Round" + "\n"
+//                    + "\n"
+//                    + "BEGIN!!" + "\n"
+//                );
+//                moveSelect();
+//                rounds++;
+//            } else () {
                 System.out.println(
-                    "\n"
-                    + "Type in 'rock' 'paper' or 'scissors' to play." + "\n"
+                    "Type in 'rock' 'paper' or 'scissors' to play." + "\n"
                     + "Type 'quit' to go back to the Main Menu" + "\n"
                     + "\n"
-                    + "Firstttt Round!" + "\n"
+//                    + "Next Round" + "\n"
+                    + "Readyyyy?" + "\n"
                     + "\n"
                     + "BEGIN!!" + "\n"
                 );
                 moveSelect();
-                rounds++;
-            } else if (rounds == 1) {
-                System.out.println(
-                    "\n"
-                    + "Type in 'rock' 'paper' or 'scissors' to play." + "\n"
-                    + "Type 'quit' to go back to the Main Menu" + "\n"
-                    + "\n"
-                    + "Next Round" + "\n"
-                    + "\n"
-                    + "BEGIN!!" + "\n"
-                );
-                moveSelect();
-                rounds++;
-            } else if (rounds == 2) {
-                System.out.println(
-                    "\n"
-                    + "Type in 'rock' 'paper' or 'scissors' to play." + "\n"
-                    + "Type 'quit' to go back to the Main Menu" + "\n"
-                    + "\n"
-                    + "Final Round" + "\n"
-                    + "\n"
-                    + "BEGIN!!" + "\n"
-                );
-                moveSelect();
-                rounds++;
-//                System.out.println(computer().computerScore);
+//                rounds++;
             }
-        }
-    }
+//            }
+//        }
+//    }
 
     public static void moveSelect() {
         String userRPSSelect = select.nextLine();
@@ -73,6 +68,8 @@ public class Computer implements UserSelect {
                         + "User picks: rock" + "\n"
                         + "Draw!" + "\n"
                     );
+//                    tied(+1);
+                    startFight();
                 } else if (randomNum == 2) {
                     System.out.println(
                         "\n"
@@ -80,8 +77,8 @@ public class Computer implements UserSelect {
                         + "User picks: rock" + "\n"
                         + "You lose!" + "\n"
                     );
-//                    computerScore ++;
-//                    System.out.println(computerScore);
+//                    computerScore(+1);
+                    startFight();
                 } else {
                     System.out.println(
                         "\n"
@@ -89,7 +86,8 @@ public class Computer implements UserSelect {
                         + "User picks: rock" + "\n"
                         + "You win!" + "\n"
                     );
-//                    userScore ++;
+//                    userScore(+1);
+                    startFight();
                 }
                 break;
             case "paper":
@@ -100,7 +98,8 @@ public class Computer implements UserSelect {
                         + "User picks: paper" + "\n"
                         + "You win!" + "\n"
                     );
-//                    userScore ++;
+//                    userScore(+1);
+                    startFight();
                 } else if (randomNum == 2) {
                     System.out.println(
                         "\n"
@@ -108,6 +107,8 @@ public class Computer implements UserSelect {
                         + "User picks: paper" + "\n"
                         + "Draw!" + "\n"
                     );
+//                    tied(+1);
+                    startFight();
                 } else {
                     System.out.println(
                         "\n"
@@ -115,7 +116,8 @@ public class Computer implements UserSelect {
                         + "User picks: paper" + "\n"
                         + "You lose!" + "\n"
                     );
-//                    computerScore ++;
+//                    computerScore(+1);
+                    startFight();
                 }
                 break;
             case "scissors":
@@ -126,7 +128,8 @@ public class Computer implements UserSelect {
                         + "User picks: scissors" + "\n"
                         + "You lose!" + "\n"
                     );
-//                    computerScore ++;
+//                    computerScore(+1);
+                    startFight();
                 } else if (randomNum == 2) {
                     System.out.println(
                         "\n"
@@ -134,7 +137,8 @@ public class Computer implements UserSelect {
                         + "User picks: scissors" + "\n"
                         + "You win!" + "\n"
                     );
-//                    userScore ++;
+//                    userScore(+1);
+                    startFight();
                 } else {
                     System.out.println(
                         "\n"
@@ -142,6 +146,8 @@ public class Computer implements UserSelect {
                         + "User picks: scissors" + "\n"
                         + "Draw!" + "\n"
                     );
+//                    tied(+1);
+                    startFight();
                 }
                 break;
             case "quit":
@@ -160,4 +166,22 @@ public class Computer implements UserSelect {
                 break;
         }
     }
+//
+//    private static void computerScore(int i) {
+//        int computerScore = 0;
+//    }
+//
+//    private static void userScore(int i) {
+//        int userScore = 0;
+//    }
+//
+//    private static void tied(int i) {
+//        int tied = 0;
+//    }
+//
+//    private static void totalScore(int i, int i) {
+//        int userScore;
+//        int totalScore = userScore, computerScore;
+//    }
+//
 }

@@ -33,11 +33,11 @@ public class Player2 implements UserSelect {
                 rounds++;
             } else if (rounds == 2) {
                 System.out.println(
-                    "\n"
-                    + "Type in 'rock' 'paper' or 'scissors' to play." + "\n"
+                    "Type in 'rock' 'paper' or 'scissors' to play." + "\n"
                     + "Type 'quit' to go back to the Main Menu" + "\n"
                     + "\n"
-                    + "Final Round" + "\n"
+                  + "Final Round" + "\n"
+//                    + "Readyyyy?"
                     + "\n"
                     + "BEGIN!!" + "\n"
                 );
